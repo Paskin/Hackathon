@@ -39,7 +39,7 @@ for page in range (1,11):
             elems = driver.find_elements_by_xpath("//div[@class='swiper-wrapper']/div/img")
             url = elems[-1].get_attribute("src").replace("/xs/","/m/")
             print(url)
-            request.urlretrieve(url, url.split('/')[-1])
+            request.urlretrieve(url, "content/" + url.split('/')[-1])
 
         except:
             pass
